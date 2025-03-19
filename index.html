@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cv/css/unicons.css">
+    <link rel="stylesheet" href="./cv/plugins/headline/headline.css">
+    <link rel="stylesheet" href="./cv/plugins/magnify.css">
+    <link rel="shorcut icon" href="./cv/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./cv/css/slick.css">
+    <link rel="stylesheet" href="./cv/css/style.css">
+    <title>CV</title>
+</head>
+
+<body>
+    <main class="container">
+        <section class="profile" id="profile__ripple">
+            <div class="left">
+                <div class="avatar__block">
+                    <img src="./cv/images/user.jpg" alt="">
+                </div>
+                <div>
+                    <h2>Clément BELLANGER</h2>
+                    <p class="cd-headline loading-bar">
+                        <span class="cd-words-wrapper">
+                            <b class="is-visible">Développeur C++</b>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="right">
+                <ul class="contact">
+                    <li>
+                        <i class="uil uil-envelope"></i><span class="reverse">
+                         rf.otijom-nigriv@regnalleb.tnemelc
+                         </span>
+                    </li>
+                    <li>
+                        <i class="uil uil-user"></i>
+                        31 ans
+                    </li>
+                    <li>
+                        <i class="uil uil-car"></i>
+                        Permis B, véhicule personnel
+                    </li>
+                    <li>
+                        <i class="uil uil-github-alt"></i>
+                        <a href="https://github.com/Kleyment">https://github.com/Kleyment</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </section>
+
+        <section class="skills">
+            <div class="content">
+                <div class="left">
+                    <div class="inner__left">
+                        <div class="heading">
+                            <i class="uil uil-graduation-cap"></i>
+                            <h5>Formation</h5>
+                        </div>
+                        <div class="timeline__wrapper">
+                            <div class="item">
+                                <p>2018 - 2021</p>
+                                <p>Master FST Informatique (AVR)</p>
+                            </div>
+                            <div class="item">
+                                <p>2016 - 2018</p>
+                                <p>Licence FST Informatique</p>
+                            </div>
+                            <div class="item">
+                                <p>2014 - 2015</p>
+                                <p>DUT Informatique décalé (Nancy-Charlemagne)</p>
+                            </div>
+                            <div class="item">
+                                <p>2013</p>
+                                <p>1ère Année ESSTIN</p>
+                            </div>
+                            <div class="item">
+                                <p>2012</p>
+                                <p>Bac S SVT spécialité Math avec mention assez bien</p>
+                                <p>Réussite du concours GEIPI (concours pour être admissible en école d’ingénieur)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner__right">
+                        <div class="heading">
+                            <i class="uil uil-suitcase-alt"></i>
+                            <h5>Expérience professionnelle</h5>
+                        </div>
+                        <div class="timeline__wrapper">
+                            <div class="item">
+                                <p>2022 - 2024</p>
+                                <p class="center">Développement d'un logiciel dans le domaine médical</p>
+                                <p>CDI</p>
+                                <p>2 ans</p>
+                            </div>
+                            <div class="item">
+                                <p>2018 & 2020 & 2021</p>
+                                <p class="center">Contribution à la fouille de données moléculaires</p>
+                                <p>Stages au LORIA </p>
+                                <p>2 mois - 6 mois - 6 mois</p>
+                            </div>
+                            <div class="item">
+                                <p>2014 - 2015</p>
+                                <p class="center">Réalisation d’une interface graphique en java pour aider à piloter des outils génomiques</p>
+                                <p>Stage à l’INSERM</p>
+                                <p>3 mois</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="skills__wrapper">
+                        <div class="heading">
+                            <i class="uil uil-comment-alt-lines"></i>
+                            <h3>Langues</h3>
+                        </div>
+                        <div class="skill-box">
+                            <h4>Anglais</h4>
+                            <div class="progress__wrap">
+                                <span id="bar1" data-percent="67" class="progress__bar">
+                                    <span id="lang1" onmouseover="displayLanguageInfos(1,true)" onmouseleave="displayLanguageInfos(1,false)" class="tooltip">B2</span>
+                                </span>
+                            </div>
+                        </div>
+                       <div class="skill-box">
+                            <h4>Allemand</h4>
+                            <div class="progress__wrap">
+                                <span id="bar2" data-percent="50" class="progress__bar">
+                                    <span id="lang2" onmouseover="displayLanguageInfos(2,true)" onmouseleave="displayLanguageInfos(2,false)" class="tooltip">B1</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="work">
+            <h1 class="section__heading">Compétences en informatique</h1>
+
+            <div class="wrapper">
+                <div class="slider__wrapper">
+
+                    <div class="slider">
+                        <div class="slide">
+                            <div class="skill-title">
+                                Langages Web
+                            </div>
+                            <div>
+                                <p>HTML, CSS, JS, PHP, création de QCM grâce à quizdown-js, hébergement d’un wiki grâce à dokuwiki, <a href="https://github.com/wario-land/HackVault">gestion
+                                    d’un site hébergeant des créations grâce aux pages github</a>, intégration d'une UI destinée à un logiciel médical à partir de règles CSS, développement d'un micro-projet de karaoké à l'aide de npm Node.js et React</p>
+                            </div>
+                        </div>
+
+                        <div class="slide">
+                            <div class="skill-title">
+                                Langage C++
+                            </div>
+                            <div>
+                                <p>Développement d'un logiciel de type médical à l'aide de QT Creator, <a href="https://github.com/wario-land/WL4Editor">développement collaboratif d’un éditeur de niveaux pour un jeu de
+                                    Game Boy Advance</a></p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="skill-title">
+                                Langage Python
+                            </div>
+                            <div>
+                                <p>Utilisation de la suite de machine learning scikit-learn, <a href="https://github.com/Kleyment/FindStringInBinary">amélioration
+                                    d’un script de recherche de chaines de caractères pour des encodages exotiques</a></p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="skill-title">
+                                Autres langages
+                            </div>
+                            <div>
+                                <p>Java, Lua</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="skill-title">
+                                Base de données SQL
+                            </div>
+                            <div>
+                                <p>PostgreSQL, MySQL, MariaDB, SQLite</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="skill-title">
+                                Connaissances Windows 
+                            </div>
+                            <div>
+                                <p>Langage Batch, écriture de scripts</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="skill-title">
+                                Connaissances Linux
+                            </div>
+                            <div>
+                                <p>Langage Bash, écriture de scripts</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="skill-title">
+                                Connaissances des systèmes embarqués
+                            </div>
+                            <div>
+                                <p>Développement STM32, Arduino, Jetson Nano, auto-hébergement avec Raspberry Pi</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="skill-title">
+                                Connaissances en réseaux de neurones
+                            </div>
+                            <div>
+                                <p>Fine-tuning d'un réseau de type YOLO, Mise en place d'un système de reconnaissance d'images entrainés sur un des données terrains</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="skill-title">
+                                Langages Tex et Latex
+                            </div>
+                            <div>
+                                <p>Rédaction de documents scientifiques</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="skill-title">
+                                Interface de développement
+                            </div>
+                            <div>
+                                <p>QT Creator, Eclipse, IntelliJ, Emacs, VSCode, Arduino IDE, STM32CubeIDE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="other">
+            <h1 class="section__heading">Autres compétences</h1>
+            <div class="wrapper">
+                <div class="slider__wrapper">
+
+                    <div class="slider">
+                        <div class="slide">
+                            <div class="skill-title">
+                                <p><a href= "./arcade/diy/2018/11/18/arcade.html">Construction d’une borne d’arcade fonctionnelle à l’aide d’une raspberry pi</a>
+                                <div class="other-skill">Intérêt pour les LLM (Large Language Model - ChatGPT, Google Gemini)</div>
+                                <div class="other-skill">Modding (modification des ressources d'un jeu vidéo grâce à des outils spécifiques développés par le moddeur pour produire une meilleure expérience vidéoludique)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./cv/js/jquery-3.4.1.min.js"></script>
+    <script src="./cv/js/app.js"></script>
+</body>
+
+</html>
