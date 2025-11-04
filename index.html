@@ -18,13 +18,13 @@
         <section class="profile" id="profile__ripple">
             <div class="left">
                 <div class="avatar__block">
-                    <img src="./cv/images/user.jpg" alt="">
+                    <img id="userPhoto" onmouseover="changeUserPhoto(true)" onmouseleave="changeUserPhoto(false)" src="./cv/images/gooduser.jpg" alt="">
                 </div>
                 <div>
                     <h2>Clément BELLANGER</h2>
                     <p class="cd-headline loading-bar">
                         <span class="cd-words-wrapper">
-                            <b class="is-visible">Ingénieur en informatique</b>
+                            <b class="is-visible">Développeur informatique</b>
                         </span>
                     </p>
                 </div>
@@ -32,8 +32,17 @@
             <div class="right">
                 <ul class="contact">
                     <li>
-                        <i class="uil uil-envelope"></i><span class="reverse">
-                         rf.otijom-nigriv@regnalleb.tnemelc
+                        <i class="uil uil-map-marker"></i>
+                        2 rue Jean Henri Dunant </br>
+                        54500 Vandoeuvre-lès-Nancy
+                    </li>
+                    <li>
+                        <i class="uil uil-phone-volume"></i>
+                        +33 6 32 23 55 65
+                    </li>
+                    <li>
+                        <i class="uil uil-envelope"></i>
+                         clement.bellanger@bigcreativity.fr
                          </span>
                     </li>
                     <li>
@@ -150,7 +159,7 @@
                                 Langages Web
                             </div>
                             <div>
-                                <p>HTML, CSS, JS, PHP, création de QCM grâce à quizdown-js, hébergement d’un wiki grâce à dokuwiki, <a href="https://github.com/wario-land/HackVault">gestion
+                                <p>HTML, CSS, <span id="surroundJS"><a id="beforeSecuJS" onmouseover="previewImage('secuJS',true)" onmouseleave="previewImage('secuJS',false)">JS</a> <img id="secuJS" src="./cv/images/secuJS.png" style="display: none;"></img></span>JS, PHP, création de QCM grâce à quizdown-js, hébergement d’un wiki grâce à dokuwiki, <a href="https://github.com/wario-land/HackVault">gestion
                                     d’un site hébergeant des créations grâce aux pages github</a>, intégration d'une UI destinée à un logiciel médical à partir de règles CSS, développement d'un micro-projet de karaoké à l'aide de npm Node.js et React</p>
                             </div>
                         </div>
@@ -251,7 +260,6 @@
                         <div class="slide">
                             <div class="skill-title">
                                 <p><a href= "./arcade.html">Construction d’une borne d’arcade fonctionnelle à l’aide d’une raspberry pi</a>
-                                <div class="other-skill">Intérêt pour les LLM (Large Language Model - ChatGPT, Google Gemini)</div>
                                 <div class="other-skill">Modding (modification des ressources d'un jeu vidéo grâce à des outils spécifiques développés par le moddeur pour produire une meilleure expérience vidéoludique)</div>
                             </div>
                         </div>

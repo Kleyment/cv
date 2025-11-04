@@ -521,8 +521,8 @@ section.work .wrapper .slider__wrapper .slider .slide p {
 }
 
 section.work .wrapper .slider__wrapper .slider .slide img {
-    width: 60px;
-    height:60px;
+    width: 33%;
+    /**height: 60px;**/
     border-radius: 50%;
     object-fit: cover;
 }
@@ -660,14 +660,33 @@ footer {
     color: var(--ternary);
 }
 
-.reverse {
-    unicode-bidi: bidi-override;
-    direction: rtl;
-}
-
 .other-skill {
     margin-top: 1rem;
 }
+
+#surroundJS {
+    position: absolute;
+    z-index: 1;
+}
+
+#beforeSecuJS {
+    z-index: 1;
+}
+
+#secuJS {
+    /* Center the whole */
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    z-index: 1;
+    animation: wildImageAppear 1s normal;
+    border-radius: 0%;
+}
+
+main.container {
+    z-index: 0;
+}
+
 
 /* Media Queries  */
 
@@ -775,5 +794,37 @@ footer {
 
     section.contact .wrapper .right .form__group {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Wild Image Appear */
+
+/**
+* CSS (image animated) secuJS img
+* 
+* position: absolute;  
+* width: 5%;
+* z-index: -1; -> 1;
+* filter: blur(5px); -> blur(0px)
+* rotate: 90deg; -> 0;
+* 
+*/
+
+@keyframes wildImageAppear {
+    0% {
+        filter: blur(5px);
+        rotate: 0deg;
+        opacity: 0;
+    }
+
+    50% {
+        filter: blur(2px);
+        rotate: 180deg;
+        opacity: 0.5;
+    }   
+
+    100% {
+        filter: blur(0px);
+        rotate: 0deg;
     }
 }
