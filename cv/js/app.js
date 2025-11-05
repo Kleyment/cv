@@ -26,41 +26,32 @@ function changeUserPhoto(isUserbad) {
 
 function previewImage(imageName, display) {
     if (display) {
-        document.getElementById(imageName).style['display']="";
+        // If the node already exists we make sure it is visible but that's all
+        if (document.getElementById(imageName) != null) {
+            document.getElementById(imageName).style['display']="";
+            return;
+        }
+
+        // We take the node before the img 
+        var previousNodeA=document.getElementById("before-"+imageName);
+
+        // We create a new img node right after the a node
+        var nextNodeImg=document.createElement("img");
+        nextNodeImg.id=imageName;
+        nextNodeImg.className="wild-images";
+        nextNodeImg.src="./cv/images/"+imageName+".png";
+        nextNodeImg.style['display']="";
+        nextNodeImg.style['border-radius']="0%";
+        nextNodeImg.style['opacity']="0.9";
+
+        //We add the visible node
+        previousNodeA.appendChild(nextNodeImg);
+
     } else {
-        document.getElementById(imageName).style['display']="none";
+        // If the node already exists we make sure it is invisible but that's all
+        if (document.getElementById(imageName) != null) {
+            document.getElementById(imageName).style['display']="none";
+            return;
+        }
     }
-    //Put the image on the good tag
-    //var imgNode=document.createElement("img");
-    //imgNode.src="./cv/images/"+imageName+".png";
-    
-
-    //var bodyNode=document.getElementsByTagName("body")[0];
-    //bodyNode.appendChild(imgNode);
-
-
-    /**
-     * CSS beforeSecuJS
-     * z-index: 0;
-     * 
-     */
-
-    /**
-     * CSS (image animated) secuJS img
-     * 
-     * position: absolute;  
-     * width: 5%;
-     * z-index: -1; -> 1;
-     * filter: blur(5px); -> blur(0px)
-     * rotate: 90deg; -> 0;
-     * display: none -> display: ''
-     * 
-     */
-
-    /**
-     * CSS container (body)
-     * 
-     * position: fixed;
-     * z-index: 0;
-     */
 }
