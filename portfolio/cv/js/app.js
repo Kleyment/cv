@@ -17,14 +17,14 @@ function displayLanguageInfos(langNum,mouseOver) {
 }
 
 function changeUserPhoto(isUserbad) {
-    if (isUserbad == true) {
+    if (isUserbad) {
         document.getElementById("userPhoto").src="./cv/images/baduser.jpg";
     } else {
         document.getElementById("userPhoto").src="./cv/images/gooduser.jpg";
     }
 }
 
-function previewImage(imageName, display) {
+function previewImage(imageName, display, extension) {
     if (display) {
         // If the node already exists we make sure it is visible but that's all
         if (document.getElementById(imageName) != null) {
@@ -39,10 +39,10 @@ function previewImage(imageName, display) {
         var nextNodeImg=document.createElement("img");
         nextNodeImg.id=imageName;
         nextNodeImg.className="wild-images";
-        nextNodeImg.src="./cv/images/"+imageName+".png";
+        nextNodeImg.src="./cv/images/"+imageName+extension;
         nextNodeImg.style['display']="";
         nextNodeImg.style['border-radius']="0%";
-        nextNodeImg.style['opacity']="0.9";
+        nextNodeImg.style['scale']="0"; //Technically just visible during the animation
 
         //We add the visible node
         previousNodeA.appendChild(nextNodeImg);
