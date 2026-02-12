@@ -13,12 +13,15 @@
     <title>CV</title>
 </head>
 
-<body>
+<body onload="loadJS()">
+    <div>
+        <img id="imagePreview" class="wild-images"></img>
+    </div>
     <main class="container">
         <section class="profile" id="profile__ripple">
             <div class="left">
                 <div class="avatar__block">
-                    <img id="userPhoto" onmouseover="changeUserPhoto(true)" onmouseleave="changeUserPhoto(false)" src="./cv/images/gooduser.jpg" alt="">
+                    <img id="userPhoto" src="./cv/images/gooduser.jpg" alt="">
                 </div>
                 <div>
                     <h2>Clément BELLANGER</h2>
@@ -37,17 +40,13 @@
                         54500 Vandoeuvre-lès-Nancy
                     </li>
                     <li>
-                        <i class="uil uil-phone-volume"></i>
-                        +33 6 32 23 55 65
-                    </li>
-                    <li>
                         <i class="uil uil-envelope"></i>
                          clement.bellanger@bigcreativity.fr
                          </span>
                     </li>
                     <li>
                         <i class="uil uil-user"></i>
-                        31 ans
+                        32 ans
                     </li>
                     <li>
                         <i class="uil uil-car"></i>
@@ -94,21 +93,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="inner__right">
+                    <div class="inner__center">
                         <div class="heading">
                             <i class="uil uil-suitcase-alt"></i>
                             <h5>Expérience professionnelle</h5>
                         </div>
                         <div class="timeline__wrapper">
                             <div class="item">
-                         JS       <p>2022 - 2024</p>
-                                <p class="center"><a id="before-cyrano" onmouseover="previewImage('cyrano',true,'.png')" onmouseleave="previewImage('cyrano',false,'.png')">Développement d'un logiciel dans le domaine médical</a></p>
+                                <p>2022 - 2024</p>
+                                <p class="center"><a class="a-hover" id="before-cyrano">Développement d'un logiciel dans le domaine médical</a></p>
                                 <p>CDI</p>
                                 <p>2 ans</p>
                             </div>
                             <div class="item">
                                 <p>2018 & 2020 & 2021</p>
-                                <p class="center"><a id="before-antibios" onmouseover="previewImage('antibios',true,'.png')" onmouseleave="previewImage('antibios',false,'.png')">Contribution à la fouille de données moléculaires</a></p>
+                                <p class="center"><a class="a-hover" id="before-antibios">Contribution à la fouille de données moléculaires</a></p>
                                 <p>Stages au LORIA </p>
                                 <p>2 mois - 6 mois - 6 mois</p>
                             </div>
@@ -120,27 +119,27 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="right">
-                    <div class="skills__wrapper">
+                    <div class="inner__right">
                         <div class="heading">
                             <i class="uil uil-comment-alt-lines"></i>
-                            <h3>Langues</h3>
+                            <h5>Langues</h5>
                         </div>
-                        <div class="skill-box">
-                            <h4>Anglais</h4>
-                            <div class="progress__wrap">
-                                <span id="bar1" data-percent="67" class="progress__bar">
-                                    <span id="lang1" onmouseover="displayLanguageInfos(1,true)" onmouseleave="displayLanguageInfos(1,false)" class="tooltip">B2</span>
-                                </span>
+                        <div class="skills__wrapper">
+                            <div class="skill-box">
+                                <p>Anglais</p>
+                                <div class="progress__wrap">
+                                    <span id="bar1" data-percent="67" class="progress__bar">
+                                        <span id="lang1" class="tooltip">B2</span>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                       <div class="skill-box">
-                            <h4>Allemand</h4>
-                            <div class="progress__wrap">
-                                <span id="bar2" data-percent="50" class="progress__bar">
-                                    <span id="lang2" onmouseover="displayLanguageInfos(2,true)" onmouseleave="displayLanguageInfos(2,false)" class="tooltip">B1</span>
-                                </span>
+                           <div class="skill-box">
+                                <p>Allemand</p>
+                                <div class="progress__wrap">
+                                    <span id="bar2" data-percent="50" class="progress__bar">
+                                        <span id="lang2" class="tooltip">B1</span>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -159,7 +158,7 @@
                                 Langages Web
                             </div>
                             <div>
-                                <p>HTML, CSS, <a id="before-secuJS" onmouseover="previewImage('secuJS',true,'.png')" onmouseleave="previewImage('secuJS',false,'.png')">JS (projet sécurité JS), </a> PHP, création de QCM grâce à quizdown-js, hébergement d’un wiki grâce à dokuwiki, <a href="https://github.com/wario-land/HackVault">gestion
+                                <p>HTML, CSS, <a class="a-hover" id="before-secuJS">JS (projet sécurité JS), </a> PHP, création de QCM grâce à quizdown-js, hébergement d’un wiki grâce à dokuwiki, <a href="https://github.com/wario-land/HackVault">gestion
                                     d’un site hébergeant des créations grâce aux pages github</a>, intégration d'une UI destinée à un logiciel médical à partir de règles CSS, développement d'un micro-projet de karaoké à l'aide de npm Node.js et React</p>
                             </div>
                         </div>
@@ -252,14 +251,14 @@
         </section>
 
         <section class="other">
-            <h1 class="section__heading">Autres compétences</h1>
+            <h1 class="section__heading">Autres  compétences</h1>
             <div class="wrapper">
                 <div class="slider__wrapper">
 
                     <div class="slider">
                         <div class="slide">
                             <div class="skill-title">
-                                <p><a id="before-borneArcade" onmouseover="previewImage('borneArcade',true,'.jpg')" onmouseleave="previewImage('borneArcade',false,'.jpg')">Construction d’une borne d’arcade fonctionnelle à l’aide d’une raspberry pi</a>
+                                <p><a class="a-hover" id="before-borneArcade">Construction d’une borne d’arcade fonctionnelle à l’aide d’une raspberry pi</a>
                                 <div class="other-skill">Modding (modification des ressources d'un jeu vidéo grâce à des outils spécifiques développés par le moddeur pour produire une meilleure expérience vidéoludique)</div>
                             </div>
                         </div>

@@ -1,3 +1,55 @@
+function loadJS() {
+
+    console.log("OK");
+
+    // Switch between Normal and Alt Photo
+    document.getElementById("userPhoto").addEventListener("mouseover", function() {
+        changeUserPhoto(true);
+    });
+    document.getElementById("userPhoto").addEventListener("mouseleave", function() {
+        changeUserPhoto(false);
+    });
+
+
+    // Display language level
+    document.getElementById("lang1").addEventListener("mouseover", function() {
+        displayLanguageInfos(1,true);
+    });
+    document.getElementById("lang1").addEventListener("mouseleave", function() {
+        displayLanguageInfos(1,false);
+    });
+
+    document.getElementById("lang2").addEventListener("mouseover", function() {
+        displayLanguageInfos(2,true);
+    });
+    document.getElementById("lang2").addEventListener("mouseleave", function() {
+        displayLanguageInfos(2,false);
+    });
+
+
+    // Display a preview image of the project
+    document.getElementById("before-cyrano").addEventListener("click", function() {
+        previewImage('cyrano',true,'.png');
+    });
+    document.getElementById("before-antibios").addEventListener("click", function() {
+        previewImage('antibios',true,'.png');
+    });
+    document.getElementById("before-secuJS").addEventListener("click", function() {
+        previewImage('secuJS',true,'.png');
+    });
+    document.getElementById("before-borneArcade").addEventListener("click", function() {
+        previewImage('borneArcade',true,'.jpg');
+    });
+
+
+    // Remove the image when image is clicked
+    document.getElementById("imagePreview").addEventListener("click", function() {
+        previewImage('',false,'');
+    });
+
+}
+
+
 function displayLanguageInfos(langNum,mouseOver) {
     if (langNum==1) {
         if (mouseOver) {
@@ -25,32 +77,16 @@ function changeUserPhoto(isUserbad) {
 }
 
 function previewImage(imageName, display, extension) {
+    var ourNode=document.getElementById("imagePreview");
+
     if (display) {
-        // If the node already exists we make sure it is visible but that's all
-        if (document.getElementById(imageName) != null) {
-            document.getElementById(imageName).style['display']="";
-            return;
-        }
-
-        // We take the node before the img 
-        var previousNodeA=document.getElementById("before-"+imageName);
-
-        // We create a new img node right after the a node
-        var nextNodeImg=document.createElement("img");
-        nextNodeImg.id=imageName;
-        nextNodeImg.className="wild-images";
-        nextNodeImg.src="./cv/images/"+imageName+extension;
-        nextNodeImg.style['display']="";
-        nextNodeImg.style['border-radius']="0%";
-        nextNodeImg.style['scale']="0"; //Technically just visible during the animation
-
-        //We add the visible node
-        previousNodeA.appendChild(nextNodeImg);
-
+        ourNode.src="./cv/images/"+imageName+extension;
+        ourNode.style['display']="";
+        ourNode.style['border-radius']="0%";
     } else {
         // If the node already exists we make sure it is invisible but that's all
-        if (document.getElementById(imageName) != null) {
-            document.getElementById(imageName).style['display']="none";
+        if (ourNode != null) {
+            ourNode.style['display']="none";
             return;
         }
     }
