@@ -112,7 +112,7 @@ section.profile {
     padding:3rem;
     margin-top: 60px;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 25% 100%, 0 80%);
-    padding-bottom:4rem;
+    height: 375px;
 }
 section.profile .left {
     flex:2;
@@ -142,12 +142,9 @@ section.profile .left p b {
     font-weight: 400;
 }
 
-section.profile .left img {
-    width:128px;
+section.profile .left .hex {
+    width: 128px;
     height: 128px;
-    border-radius: 30%;
-    object-fit: cover;
-    background-position: 137px 0px;
 }
 
 section.profile .left .avatar__block {
@@ -318,8 +315,12 @@ section.skills .content {
 }
 
 section.skills .content .left {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.skills .content .inner {
+    width: 300px;
 }
 
 section.skills .content .left .heading {
@@ -782,6 +783,7 @@ a.a-hover:focus::after{
 
     section.about .content .left {
         margin-bottom: 6rem;
+        
     }
 
     section.contact .wrapper {

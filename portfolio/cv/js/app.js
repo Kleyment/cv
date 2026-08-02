@@ -1,14 +1,12 @@
 function loadJS() {
-
-    //console.log("OK");
-
+    
     // Switch between Normal and Alt Photo
-    document.getElementById("userPhoto").addEventListener("mouseover", function() {
-        changeUserPhoto(true);
-    });
-    document.getElementById("userPhoto").addEventListener("mouseleave", function() {
-        changeUserPhoto(false);
-    });
+    //document.getElementById("hexUserPhoto").addEventListener("mouseover", function() {
+    //    changeUserPhoto(true);
+    //});
+    //document.getElementById("hexUserPhoto").addEventListener("mouseleave", function() {
+    //    changeUserPhoto(false);
+    //});
 
 
     // Display language level
@@ -38,6 +36,20 @@ function loadJS() {
         previewImage('secuJS',true,'.png');
     });
     document.getElementById("before-borneArcade").addEventListener("click", function() {
+        previewImage('borneArcade',true,'.jpg');
+    });
+
+    // Display a preview image of the project
+    document.getElementById("cyrano-grid").addEventListener("click", function() {
+        previewImage('cyrano',true,'.png');
+    });
+    document.getElementById("antibios-grid").addEventListener("click", function() {
+        previewImage('antibios',true,'.png');
+    });
+    document.getElementById("secuJS-grid").addEventListener("click", function() {
+        previewImage('secuJS',true,'.png');
+    });
+    document.getElementById("borneArcade-grid").addEventListener("click", function() {
         previewImage('borneArcade',true,'.jpg');
     });
 
