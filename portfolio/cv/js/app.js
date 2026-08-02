@@ -1,6 +1,6 @@
 function loadJS() {
 
-    console.log("OK");
+    //console.log("OK");
 
     // Switch between Normal and Alt Photo
     document.getElementById("userPhoto").addEventListener("mouseover", function() {
@@ -49,7 +49,6 @@ function loadJS() {
 
 }
 
-
 function displayLanguageInfos(langNum,mouseOver) {
     if (langNum==1) {
         if (mouseOver) {
@@ -82,7 +81,7 @@ function previewImage(imageName, display, extension) {
     if (display) {
         ourNode.src="./cv/images/"+imageName+extension;
         ourNode.style['display']="";
-        ourNode.style['border-radius']="0%";
+        ourNode.style['animation']="wildImageAppear 1s normal";
     } else {
         // If the node already exists we make sure it is invisible but that's all
         if (ourNode != null) {

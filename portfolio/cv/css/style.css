@@ -674,10 +674,13 @@ footer {
     /* Center the whole */
     position: fixed;
     z-index: 1;
-    animation: wildImageDisappear 3s normal;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.wild-images:hover {
+    filter: opacity(0.5) grayscale();
 }
 
 main.container {
@@ -829,42 +832,11 @@ a.a-hover:focus::after{
     }
 }
 
-/* Wild Image Appear and Disappear Animation CSS */
+/* Wild Image Animation CSS */
 
 @keyframes wildImageAppear {
     0% {
         filter: blur(5px);
-        rotate: 0deg;
-        opacity: 0;
-        scale: 1;
-    }
-
-    12% {
-        filter: blur(2px);
-        rotate: 180deg;
-        opacity: 0.5;
-        scale: 1;
-    }   
-
-    20% {
-        filter: blur(0px);
-        rotate: 0deg;
-        opacity: 1;
-        scale: 1;
-    }
-
-    100% {
-        filter: blur(0px);
-        rotate: 0deg;
-        opacity: 1;
-        scale: 1;
-    }
-}
-
-@keyframes wildImageDisappear {
-    0% {
-        filter: blur(5px);
-        rotate: 0deg;
         opacity: 0;
     }
 
