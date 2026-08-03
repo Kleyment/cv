@@ -1,13 +1,4 @@
 function loadJS() {
-    
-    // Switch between Normal and Alt Photo
-    //document.getElementById("hexUserPhoto").addEventListener("mouseover", function() {
-    //    changeUserPhoto(true);
-    //});
-    //document.getElementById("hexUserPhoto").addEventListener("mouseleave", function() {
-    //    changeUserPhoto(false);
-    //});
-
 
     // Display language level
     document.getElementById("lang1").addEventListener("mouseover", function() {
@@ -26,39 +17,25 @@ function loadJS() {
 
 
     // Display a preview image of the project
-    document.getElementById("before-cyrano").addEventListener("click", function() {
-        previewImage('cyrano',true,'.png');
-    });
-    document.getElementById("before-antibios").addEventListener("click", function() {
-        previewImage('antibios',true,'.png');
-    });
-    document.getElementById("before-secuJS").addEventListener("click", function() {
-        previewImage('secuJS',true,'.png');
-    });
-    document.getElementById("before-borneArcade").addEventListener("click", function() {
-        previewImage('borneArcade',true,'.jpg');
-    });
-    document.getElementById("before-wl4").addEventListener("click", function() {
-        previewImage('wl4',true,'.png');
-    });
-
-    // Display a preview image of the project
-    document.getElementById("cyrano-grid").addEventListener("click", function() {
-        previewImage('cyrano',true,'.png');
-    });
-    document.getElementById("antibios-grid").addEventListener("click", function() {
-        previewImage('antibios',true,'.png');
-    });
-    document.getElementById("secuJS-grid").addEventListener("click", function() {
-        previewImage('secuJS',true,'.png');
-    });
-    document.getElementById("borneArcade-grid").addEventListener("click", function() {
-        previewImage('borneArcade',true,'.jpg');
-    });
-    document.getElementById("wl4-grid").addEventListener("click", function() {
-        previewImage('wl4',true,'.png');
-    });
-
+    let previewNodes=document.querySelectorAll("[class*=preview-]");
+    for (const node of previewNodes) {
+        console.log(node)
+        for (const className of node.classList) {
+            if (className.startsWith("preview-jpg-")) {
+                const previewItem=className.substring(12,className.length);
+                node.addEventListener("click", function() {
+                    previewImage(previewItem,true,'.jpg');
+                    console.log(previewItem)
+                });
+            } else if (className.startsWith("preview-png-")) {
+                const previewItem=className.substring(12,className.length);
+                node.addEventListener("click", function() {
+                    previewImage(previewItem,true,'.png');
+                    console.log(previewItem)
+                });
+            }
+        }
+    }
 
     // Remove the image when image is clicked
     document.getElementById("imagePreview").addEventListener("click", function() {
