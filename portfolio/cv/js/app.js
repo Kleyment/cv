@@ -38,6 +38,9 @@ function loadJS() {
     document.getElementById("before-borneArcade").addEventListener("click", function() {
         previewImage('borneArcade',true,'.jpg');
     });
+    document.getElementById("before-wl4").addEventListener("click", function() {
+        previewImage('wl4',true,'.png');
+    });
 
     // Display a preview image of the project
     document.getElementById("cyrano-grid").addEventListener("click", function() {
@@ -52,6 +55,9 @@ function loadJS() {
     document.getElementById("borneArcade-grid").addEventListener("click", function() {
         previewImage('borneArcade',true,'.jpg');
     });
+    document.getElementById("wl4-grid").addEventListener("click", function() {
+        previewImage('wl4',true,'.png');
+    });
 
 
     // Remove the image when image is clicked
@@ -64,17 +70,17 @@ function loadJS() {
 function displayLanguageInfos(langNum,mouseOver) {
     if (langNum==1) {
         if (mouseOver) {
-            $('#lang1').text("845 pts TOEIC");
+            document.getElementById("lang1").innerHTML="845 pts TOEIC";
         } else {
-            $('#lang1').text("B2");
+            document.getElementById("lang1").innerHTML="B2";
         }
     } else {
         if (mouseOver) {
-            $('#lang2').text("Diplôme Goethe-Institut");
-            $('#lang2').css("right","-150px");
+            document.getElementById("lang2").innerHTML="Diplôme Goethe-Institut";
+            document.getElementById("lang2").style['right']="-150px";
         } else {
-            $('#lang2').text("B1");
-            $('#lang2').css("right","-15px");
+            document.getElementById("lang2").innerHTML="B1";
+            document.getElementById("lang2").style['right']="-15px";
         }
     }
 }
