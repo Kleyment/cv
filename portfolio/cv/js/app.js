@@ -19,19 +19,16 @@ function loadJS() {
     // Display a preview image of the project
     let previewNodes=document.querySelectorAll("[class*=preview-]");
     for (const node of previewNodes) {
-        console.log(node)
         for (const className of node.classList) {
             if (className.startsWith("preview-jpg-")) {
                 const previewItem=className.substring(12,className.length);
                 node.addEventListener("click", function() {
                     previewImage(previewItem,true,'.jpg');
-                    console.log(previewItem)
                 });
             } else if (className.startsWith("preview-png-")) {
                 const previewItem=className.substring(12,className.length);
                 node.addEventListener("click", function() {
                     previewImage(previewItem,true,'.png');
-                    console.log(previewItem)
                 });
             }
         }
